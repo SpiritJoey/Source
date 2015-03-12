@@ -1,0 +1,23 @@
+git init //创建仓库
+git add <filename>	//将一个文件放到暂存区
+git commit -m "……"	//commit所有暂存区的文件
+git status  //查看本地和暂存区状态
+git diff 	//查看修改记录
+git log		//显示历史的文件版本  --pretty=oneline
+git reflog	//显示历史commit操作
+git reset --hard <commit_id>	//回退到commit_id的版本
+git reset head <filename>		//移除暂存区的内容
+git checkout -- <filename>		//撤销工作区的内容
+git rm <filename>	//删除文件
+
+git remote add origin git@github.com:……	//添加一个远程库
+git push （-u） origin master	//上传一个本地库	（第一次）
+git clone git@github.com:……		//clone一个远程库到本地	
+
+git branch/branch <*>/branch -d	<*>			//查看分支/创建一个分支/删除一个分支
+git checkout/checkout -b 	//切换分支/创建并切换分支
+git merge <*>	//将指定分支快速合并到当前分支
+git merge --no-ff -m "……" <*>	//创建一个新的commit，然后合并指定分支。
+git stash	//储存临时的工作空间
+git stash list/apply/pop	//查看所有stash/读取某个stash并保留/读取某个stash并删除
+git branch --set-upstream branch-name origin/branch-name  //将指定的分支与服务器上的分支连接起来
